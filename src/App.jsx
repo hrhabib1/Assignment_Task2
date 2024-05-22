@@ -1,12 +1,33 @@
-import './App.css'
+import { useState } from 'react';
+import './App.css'; 
+const App = () => {
+  const [outputString, setOutputString] = useState('');
 
-function App() {
+  const handleTileClick = (letter) => {
+    let newOutputString = outputString + letter;
+
+    // Function to replace consecutive letters
+    newOutputString = newOutputString.replace(/(.)\1{2,}/g, (match) => '_'.repeat(match.length));
+
+    setOutputString(newOutputString);
+  };
+
+  const renderTiles = () => {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    return alphabet.map((letter) => (
+      <button key={letter} className="tile" onClick={() => handleTileClick(letter)}>
+        {letter}
+      </button>
+    ));
+  };
 
   return (
-    <div>
-<h1>Start</h1>
+    <div className="app">
+      <div className="tile-container">{renderTiles()}</div>
+      <div id="outputString" className="output-string">Output String: {outputString}</div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
+
