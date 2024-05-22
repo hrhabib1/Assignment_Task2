@@ -1,0 +1,37 @@
+.app {
+  text-align: center;
+  padding: 50px;
+  margin:0 200px;
+  justify-items: center;
+  width: 100%;
+}
+
+.tile-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  background-color: bisque;
+  margin: auto;
+  border: 2px solid rgb(109, 98, 109);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.tile {
+  padding: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.output-string {
+  margin-top: 30px;
+  font-size: 24px;
+  padding: 10px;
+  border: 2px solid wheat;
+  text-align: start;
+}
+.output{
+  margin-left: 10px;
+  font-weight: bold;
+  color: rgb(18, 139, 145);
+}

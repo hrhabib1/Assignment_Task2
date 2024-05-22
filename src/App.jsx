@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className="app">
       <div className="tile-container">{renderTiles()}</div>
-      <div id="outputString" className="output-string">Output String: {outputString}</div>
+      <div id="outputString" className="output-string"><strong>Output String:</strong> <span className='output'>{outputString}</span> </div>
     </div>
   );
 };
