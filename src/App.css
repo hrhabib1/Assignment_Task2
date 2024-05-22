@@ -1,7 +1,7 @@
 .app {
   text-align: center;
   padding: 50px;
-  margin:0 200px;
+  margin: 0 200px;
   justify-items: center;
   width: 100%;
 }
@@ -12,6 +12,7 @@
   gap: 10px;
   background-color: bisque;
   margin: auto;
+  max-width: 100%;
   border: 2px solid rgb(109, 98, 109);
   border-radius: 5px;
   padding: 20px;
@@ -27,11 +28,60 @@
   margin-top: 30px;
   font-size: 24px;
   padding: 10px;
+  max-width: 100%;
   border: 2px solid wheat;
   text-align: start;
 }
-.output{
+
+.output {
   margin-left: 10px;
   font-weight: bold;
   color: rgb(18, 139, 145);
+}
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  .app {
+    padding: 20px;
+    margin: 0 100px;
+  }
+
+  .tile-container {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .tile {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .output-string {
+    margin-top: 20px;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 5px;
+    margin: auto;
+  }
+
+  .tile-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    padding: 5px;
+  }
+
+  .tile {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .output-string {
+    margin-top: 5px;
+    padding: 5px;
+  }
 }
